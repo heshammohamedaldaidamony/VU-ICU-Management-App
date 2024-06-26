@@ -14,12 +14,10 @@ VU is a graduate project aimed at revolutionizing patient monitoring and healthc
 - **Additional Technologies**: Computer vision algorithm
   
 ## Project Beginnings
-### First Team Meeting (SDLC)
+#### First Team Meeting (SDLC)
 The VU project started with our first team meeting, where we discussed the challenges faced by healthcare providers in ICUs. This pivotal meeting set the foundation for our project. We conducted a thorough analysis to identify key pain points in patient monitoring and data management, aiming to understand the limitations of current ICU management and how our app could effectively address these challenges.
-### Initial Intuition and App Sequence
-We brainstormed potential solutions and visualized our ideas on paper. This process involved:
-- **Mapping Out the User Journey**: We outlined the sequence of actions that users (doctors, nurses, and other healthcare providers) would take when using the VU app. This helped us understand the flow and structure of the app from a user perspective.
-- **Sketching the User Interface (UI)**: We created rough sketches of the UI on paper, focusing on creating a user-friendly and intuitive design. These sketches served as the first visual representation of our app, highlighting the essential features and layout.
+#### Initial Intuition and App Sequence (User Journey)
+We brainstormed potential solutions and visualized our ideas on paper. We created rough sketches of the UI on paper, focusing on creating a user-friendly and intuitive design. These sketches served as the first visual representation of our app, highlighting the essential features and layout.
 - 🔗[View Figma Sketching Process](https://www.figma.com/board/ZQrooRtj2tLBjVQd0YZJbc/VUE-SDLC?node-id=0-1&t=mkKWM7DL2DmUfKcb-1)
 
 
