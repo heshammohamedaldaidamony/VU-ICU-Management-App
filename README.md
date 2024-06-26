@@ -22,7 +22,7 @@ We brainstormed potential solutions and visualized our ideas on paper. We create
 - 🔗[View Figma Sketching Process](https://www.figma.com/board/ZQrooRtj2tLBjVQd0YZJbc/VUE-SDLC?node-id=0-1&t=mkKWM7DL2DmUfKcb-1)
 #### SDLC Planning
 We initiated the Software Development Life Cycle (SDLC) planning process, outlining phases and deliverables required to achieve our project goals and we distributed tasks among team members based on their expertise and roles :
-![Notion Teamspace](DOCs/Media/Notion%20VU%20Teamspace.png)
+- 🔗[View Notion Teamspace](DOCs/Media/Notion%20VU%20Teamspace.png)
 
 ---
 ### The Inspiration Behind "VU"
