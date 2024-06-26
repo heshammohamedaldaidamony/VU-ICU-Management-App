@@ -21,7 +21,7 @@ The VU project started with our first team meeting, where we discussed the chall
 We brainstormed potential solutions and visualized our ideas on paper. We created rough sketches of the UI on paper .These sketches served as the first visual representation of our app, highlighting the essential features and layout.
 - 🔗[View Figma Sketching Process](https://www.figma.com/board/ZQrooRtj2tLBjVQd0YZJbc/VUE-SDLC?node-id=0-1&t=mkKWM7DL2DmUfKcb-1)
 #### SDLC Planning
-We initiated the Software Development Life Cycle (SDLC) planning process, outlining phases and deliverables required to achieve our project goals and we distributed tasks among team members based on their expertise and roles
-- 🔗[View Notion Team WorkSpace]()
+We initiated the Software Development Life Cycle (SDLC) planning process, outlining phases and deliverables required to achieve our project goals and we distributed tasks among team members based on their expertise and roles :
+![Notion Teamspace](DOCs/Media/Notion%20VU%20Teamspace.png)
 
 
