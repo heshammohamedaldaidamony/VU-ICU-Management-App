@@ -24,4 +24,11 @@ We brainstormed potential solutions and visualized our ideas on paper. We create
 We initiated the Software Development Life Cycle (SDLC) planning process, outlining phases and deliverables required to achieve our project goals and we distributed tasks among team members based on their expertise and roles :
 ![Notion Teamspace](DOCs/Media/Notion%20VU%20Teamspace.png)
 
+---
+### The Inspiration Behind "VU"
+Befor moving to analysis phase lets see what is behind name "VU".
+- "VU" derives from the word "view", emphasizing our focus on providing healthcare providers (doctors and nurses) with a clear view and monitoring capability of patient conditions remotely.
+- The characters "V" and "U" resemble peaks often seen in ECG (Electrocardiogram) readings as you see : 
+![Name Inspiration](DOCs/Media/Name%20Inspiration.png)
+---
 
