@@ -37,3 +37,11 @@ Befor moving to analysis phase lets see what is behind name "VU".
 ![Name Inspiration](DOCs/Media/Name%20Inspiration.png)
 ---
 
+## Analysis
+During the analysis phase, our team focused on thoroughly understanding the project's requirements and processes : 
+#### Functional and Non-Functional Requirements
+#### Business Model Exploration
+#### Database Analysis and Design
+We designed the database schema, ensuring it meets the project requirements. We created both logical and physical Entity-Relationship (ER) diagrams to represent and relationships between different entities in the system.
+- 🔗[View DataBase Diagrams](DataBase-mysql)
+
