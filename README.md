@@ -15,13 +15,18 @@ VU is a graduate project aimed at revolutionizing patient monitoring and healthc
 
 # 🔄 Software Development LifeCycle
 ## Planning (Project Beginnings)
-#### First Team Meeting
-The VU project started with our first team meeting, where we discussed the challenges faced by healthcare providers in ICUs. We conducted a thorough analysis to identify key pain points in patient monitoring and data management, aiming to understand the limitations of current ICU management and how our app could effectively address these challenges.
-#### Initial Intuition and App Sequence (User Journey)
-We brainstormed potential solutions and visualized our ideas on paper. We created rough sketches of the UI on paper .These sketches served as the first visual representation of our app, highlighting the essential features and layout.
+To gain a deeper understanding of ICU operations and to gather first-hand insights, we visited several hospitals and interacted with healthcare professionals. These visits were instrumental in shaping our project requirements and understanding the real-world challenges faced by ICU staff :
+| Challenge                                      | Solution                                          |
+|------------------------------------------------|---------------------------------------------------|
+| Manual monitoring with potential for errors    | Automated vital sign recording                    |
+| Paper-based records hindering communication    | Electronic record-keeping                         |
+| Continuous monitoring increased stress         | Real-time data streaming and remote monitoring    |
+| Compromised patient care quality               | Enhanced communication and instant notifications  |
+#### First Team Meeting and App Sequence (User Journey)
+we discussed the challengss and brainstormed potential solutions and visualized our ideas on paper. We created rough sketches of the UI on paper served as the first visual representation of our app, highlighting the essential features and layout.
 - 🔗[View Figma Sketching Process](https://www.figma.com/board/ZQrooRtj2tLBjVQd0YZJbc/VUE-SDLC?node-id=0-1&t=mkKWM7DL2DmUfKcb-1)
-#### SDLC Planning
-We initiated the Software Development Life Cycle (SDLC) planning process, outlining phases and deliverables required to achieve our project goals and we distributed tasks among team members based on their expertise and roles :
+
+we distributed tasks among team members based on their expertise and roles :
 - 🔗[View Notion Teamspace](DOCs/Media/Notion%20VU%20Teamspace.png)
 
 ---
