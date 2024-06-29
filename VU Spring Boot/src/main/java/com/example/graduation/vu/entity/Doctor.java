@@ -1,14 +1,16 @@
 package com.example.graduation.vu.entity;
 
 
-public class Doctor {
+import com.example.graduation.vu.login.User;
+
+public class Doctor extends User {
     private String idDoctor;
     private String name;
     private String specialize;
     private String street;
     private String zone;
     private byte[] picture;
-    private String phone;
+    final private String role="doctor";
 
     public String getIdDoctor() {
         return idDoctor;
@@ -24,14 +26,6 @@ public class Doctor {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public byte[] getPicture() {
@@ -64,6 +58,11 @@ public class Doctor {
 
     public void setZone(String zone) {
         this.zone = zone;
+    }
+
+    @Override
+    public String getRole() {
+        return role;
     }
 }
 
