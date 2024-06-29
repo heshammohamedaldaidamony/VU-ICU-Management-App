@@ -20,7 +20,7 @@ To gain a deeper understanding of ICU operations and to gather first-hand insigh
 |------------------------------------------------|---------------------------------------------------|
 | Manual monitoring with potential for errors    | Automated vital sign recording                    |
 | Paper-based records hindering communication    | Electronic record-keeping                         |
-| Continuous monitoring increased stress         | Real-time data streaming and remote monitoring    |
+| Continuous monitoring increased stress         | Remote monitoring Real-time streaming by CAM      |
 | Compromised patient care quality               | Enhanced communication and instant notifications  |
 #### First Team Meeting and App Sequence (User Journey)
 we discussed the challengss and brainstormed potential solutions and visualized our ideas on paper. We created rough sketches of the UI on paper served as the first visual representation of our app, highlighting the essential features and layout.
@@ -36,4 +36,12 @@ Befor moving to analysis phase lets see what is behind name "VU".
 - The characters "V" and "U" resemble peaks often seen in ECG (Electrocardiogram) readings as you see : 
 ![Name Inspiration](DOCs/Media/Name%20Inspiration.png)
 ---
+
+## Analysis
+During the analysis phase, our team focused on thoroughly understanding the project's requirements and processes : 
+#### Functional and Non-Functional Requirements
+#### Business Model Exploration
+#### Database Analysis and Design
+We designed the database schema, ensuring it meets the project requirements. We created both logical and physical Entity-Relationship (ER) diagrams to represent and relationships between different entities in the system.
+- 🔗[View DataBase Script And Diagrams](DataBase-mysql)
 
