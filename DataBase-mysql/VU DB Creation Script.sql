@@ -171,7 +171,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `icu_management`.`task` (
   `id_task` BIGINT NOT NULL AUTO_INCREMENT,
-  `discription` VARCHAR(500) NULL,
+  `description` VARCHAR(500) NULL,
   `status` ENUM('done', 'not done') NOT NULL,
   `donedate` TIMESTAMP NULL,
   `duedate` DATETIME NULL,
