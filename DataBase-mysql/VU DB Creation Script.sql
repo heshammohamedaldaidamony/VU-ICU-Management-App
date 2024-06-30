@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `icu_management`.`doctor` (
   `specialize` VARCHAR(100) NULL,
   `street` VARCHAR(100) NULL,
   `zone` VARCHAR(45) NULL,
-  `picture` BLOB NULL,
+  `picture` MEDIUMBLOB NULL,
   PRIMARY KEY (`id_doctor`))
 ENGINE = InnoDB;
 
@@ -161,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `icu_management`.`nurse` (
   `name` VARCHAR(100) NOT NULL,
   `street` VARCHAR(100) NULL,
   `zone` VARCHAR(45) NULL,
-  `picture` BLOB NULL,
+  `picture` MEDIUMBLOB NULL,
   PRIMARY KEY (`id_nurse`))
 ENGINE = InnoDB;
 
@@ -230,7 +230,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `icu_management`.`image` (
   `id_image` INT NOT NULL AUTO_INCREMENT,
-  `path` BLOB NOT NULL,
+  `path` MEDIUMBLOB NOT NULL,
   `id_med_report` BIGINT NOT NULL,
   PRIMARY KEY (`id_image`),
   INDEX `id_medical_report_idx` (`id_med_report` ASC) VISIBLE,
