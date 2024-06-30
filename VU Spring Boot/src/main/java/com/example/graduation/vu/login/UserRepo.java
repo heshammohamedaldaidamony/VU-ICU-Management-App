@@ -2,6 +2,7 @@ package com.example.graduation.vu.login;
 
 import com.example.graduation.vu.entity.Doctor;
 import com.example.graduation.vu.entity.Nurse;
+import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.ResponseEntity;
@@ -17,5 +18,17 @@ public interface UserRepo  extends CrudRepository<User,String > {
             "join phone_nurse on nurse.id_nurse=phone_nurse.id_nurse\n" +
             "where phone_nurse.phone=:phone")
     public Nurse findNurseByPhone(String phone);
+
+    //Update profile pic
+    @Modifying
+    @Query("UPDATE icu_management.doctor\n" +
+            "SET picture =:picture\n" +
+            "WHERE id_doctor =:id")
+    public void updateDoctorProfilePictureBYId(String id,byte[] picture);
+    @Modifying
+    @Query("UPDATE icu_management.nurse\n" +
+            "SET picture =:picture\n" +
+            "WHERE id_nurse =:id")
+    public void updateNurseProfilePictureBYId(String id,byte[] picture);
 
 }

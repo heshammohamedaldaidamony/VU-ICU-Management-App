@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @Service
 public class UserService {
@@ -26,5 +29,17 @@ public class UserService {
                 return ResponseEntity.ok(nurse);
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+    }
+
+    public ResponseEntity<?> setProfilePic(String id, String role , MultipartFile file) throws IOException {
+        if(!file.isEmpty()){
+            byte[] picture = file.getBytes();
+            if(role.equals("doctor"))
+                userRepo.updateDoctorProfilePictureBYId(id,picture);
+            else
+                userRepo.updateNurseProfilePictureBYId(id,picture);
+            return ResponseEntity.ok("Profile Picture Has Set");
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Please Choose A Picture");
     }
 }
