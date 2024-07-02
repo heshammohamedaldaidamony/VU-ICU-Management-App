@@ -57,12 +57,14 @@ public interface TaskRepo extends CrudRepository<Task, Long> {
     public List<Task> findAllTasksByDoctorId(String id);
     @Query("SELECT task.id_task , task.description , task.status , task.donedate , task.duedate ,\n" +
             "doctor.id_doctor , doctor.name as doctor , medicine.id_medicine , \n" +
-            "medicine.name as medicine , nurse.id_nurse , nurse.name as nurse \n" +
+            "medicine.name as medicine ,patient.id_patient , task.id_nurse \n" +
             "FROM icu_management.task\n" +
-            "left join doctor on doctor.id_doctor=task.id_doctor\n" +
+            "join doctor on doctor.id_doctor=task.id_doctor\n" +
             "left join medicine on medicine.id_medicine=task.id_medicine\n" +
-            "left join nurse on nurse.id_nurse=task.id_nurse\n" +
-            "where nurse.id_nurse=:id")
+            "join patient on patient.id_patient=task.id_patient\n" +
+            "join shift_nurse_patient on shift_nurse_patient.id_patient=patient.id_patient\n" +
+            "join shift on shift.id_shift=shift_nurse_patient.id_shift\n" +
+            "where task.duedate between shift.start and shift.end || task.id_nurse=:id")
     public List<Task> findAllTasksByNurseId(String id);
 
     @Modifying
