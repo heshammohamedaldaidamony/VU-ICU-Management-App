@@ -1,8 +1,10 @@
 package com.example.graduation.vu.patient;
 
 import com.example.graduation.vu.entity.Patient;
+import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -26,4 +28,16 @@ public interface PatientRepo extends CrudRepository<Patient,String > {
             "where unit.id_unit=:id")
     public List<Patient> findPatientsByUnitId(int id);
 
+    @Modifying
+    @Query("INSERT INTO `icu_management`.`patient_device` (`id_patient`, `id_device`) \n" +
+            "VALUES (:idPatient, :idDevice);\n")
+    public int savePatientDevice(String idPatient,int idDevice);
+
+    @Modifying
+    @Query("DELETE FROM `icu_management`.`patient_device`\n" +
+            "WHERE `id_patient` =:idPatient")
+    public void deletePatientDevice(String idPatient);
+
+    @Query("SELECT COUNT(*) FROM patient_device WHERE id_patient =:idPatient")
+    public int countPatientDeviceByIdPatient(String idPatient);
 }
