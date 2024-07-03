@@ -9,14 +9,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/beds")
+@RequestMapping("/patients")
 public class PatientContr {
     @Autowired
     private PatientService patientService;
 
-    @GetMapping("/patients/{id}")
-    public ResponseEntity<?> getPatients(@PathVariable int id){
+    //Get bed by unit id
+    @GetMapping("/beds/{id}")
+    public ResponseEntity<?> getBeds(@PathVariable int id){
         return patientService.getBeds(id);
+    }
+
+    @GetMapping("/personal-info")
+    public ResponseEntity<?> getPersonalInfo(@RequestParam String id){
+        return patientService.getPersonalInfo(id);
     }
 
     //Add a patient on a bed

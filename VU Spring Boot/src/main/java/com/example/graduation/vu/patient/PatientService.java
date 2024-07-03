@@ -1,6 +1,8 @@
 package com.example.graduation.vu.patient;
 
+import com.example.graduation.vu.entity.Device;
 import com.example.graduation.vu.entity.Patient;
+import com.example.graduation.vu.patient.device.DeviceRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,13 +15,14 @@ import java.util.List;
 public class PatientService {
     @Autowired
     private PatientRepo patientRepo;
+    @Autowired
+    private DeviceRepo deviceRepo;
 
     public ResponseEntity<?> getBeds(int id){
-        Beds beds = new Beds();
-        beds.setTotalBeds(patientRepo.countDevicesByUnitId(id));
-        List<Patient> patients = patientRepo.findPatientsByUnitId(id);
-        beds.setPatients(patients);
-        return ResponseEntity.ok(beds);
+        List<Device> devices = deviceRepo.findAllDevicesByUnitId(id);
+        if(devices.isEmpty())
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("This Unit Has No Devices");
+        return ResponseEntity.ok(devices);
     }
 
     public ResponseEntity<?> mapPatientBed( String idPatient , int idDevice) {
@@ -38,5 +41,9 @@ public class PatientService {
     public ResponseEntity<?> deletePatientBed(String idPatient) {
         patientRepo.deletePatientDevice(idPatient);
         return ResponseEntity.ok("Patient Deleted");
+    }
+
+    public ResponseEntity<?> getPersonalInfo(String id) {
+        return ResponseEntity.ok(patientRepo.findById(id));
     }
 }

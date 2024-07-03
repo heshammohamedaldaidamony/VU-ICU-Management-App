@@ -30,7 +30,6 @@ public class Patient {
     @Column("date_out")
     private LocalDate dateOut;
     private String diagnosis;
-    private String nurse;
 
     public LocalDate getBirth() {
         return birth;
@@ -142,13 +141,5 @@ public class Patient {
 
     public void setZone(String zone) {
         this.zone = zone;
-    }
-
-    public String getNurse() {
-        return nurse;
-    }
-
-    public void setNurse(String nurse) {
-        this.nurse = nurse;
     }
 }
