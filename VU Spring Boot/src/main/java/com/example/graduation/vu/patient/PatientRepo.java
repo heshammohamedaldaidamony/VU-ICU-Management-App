@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -28,4 +29,18 @@ public interface PatientRepo extends CrudRepository<Patient,String > {
 
     @Query("SELECT COUNT(*) FROM patient_device WHERE id_patient =:idPatient")
     public int countPatientDeviceByIdPatient(String idPatient);
+
+    //Update date in when add
+    @Modifying
+    @Query("UPDATE icu_management.patient\n" +
+            "SET date_in =:now  \n" +
+            "WHERE id_patient =:idPatient")
+    public void UpdatePatientDateIn(String idPatient, LocalDate now);
+
+    //Update date out when delete
+    @Modifying
+    @Query("UPDATE icu_management.patient\n" +
+            "SET date_out =:now  \n" +
+            "WHERE id_patient =:idPatient")
+    public void UpdatePatientDateOut(String idPatient, LocalDate now);
 }

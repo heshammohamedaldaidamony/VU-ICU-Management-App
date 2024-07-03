@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +27,12 @@ public class PatientService {
     }
 
     public ResponseEntity<?> mapPatientBed( String idPatient , int idDevice) {
-            if(patientRepo.countPatientDeviceByIdPatient(idPatient)>0)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This Patient Already On A Device");
+        if(patientRepo.countPatientDeviceByIdPatient(idPatient)>0)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This Patient Already On A Device");
 
         try {
             patientRepo.savePatientDevice(idPatient,idDevice);
+            patientRepo.UpdatePatientDateIn(idPatient, LocalDate.now());
             return ResponseEntity.ok("Patient Added");
         }
         catch (Exception e){
@@ -40,6 +42,7 @@ public class PatientService {
 
     public ResponseEntity<?> deletePatientBed(String idPatient) {
         patientRepo.deletePatientDevice(idPatient);
+        patientRepo.UpdatePatientDateOut(idPatient, LocalDate.now());
         return ResponseEntity.ok("Patient Deleted");
     }
 
