@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface ImageRepo extends CrudRepository<Image,Long> {
-    @Query("SELECT id_image,path FROM icu_management.image\n" +
+    @Query("SELECT id_image,path FROM railway.image\n" +
             "where id_med_report=:IdMR")
     public List<Image> findAllImagesByMRId(@Param("IdMR") Long IdMR);
 }

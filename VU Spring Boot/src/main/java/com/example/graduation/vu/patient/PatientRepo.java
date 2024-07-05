@@ -18,12 +18,12 @@ public interface PatientRepo extends CrudRepository<Patient,String > {
     public int countDevicesByUnitId(int id);
 
     @Modifying
-    @Query("INSERT INTO `icu_management`.`patient_device` (`id_patient`, `id_device`) \n" +
+    @Query("INSERT INTO `railway`.`patient_device` (`id_patient`, `id_device`) \n" +
             "VALUES (:idPatient, :idDevice);\n")
     public int savePatientDevice(String idPatient,int idDevice);
 
     @Modifying
-    @Query("DELETE FROM `icu_management`.`patient_device`\n" +
+    @Query("DELETE FROM `railway`.`patient_device`\n" +
             "WHERE `id_patient` =:idPatient")
     public void deletePatientDevice(String idPatient);
 
@@ -32,14 +32,14 @@ public interface PatientRepo extends CrudRepository<Patient,String > {
 
     //Update date in when add
     @Modifying
-    @Query("UPDATE icu_management.patient\n" +
+    @Query("UPDATE railway.patient\n" +
             "SET date_in =:now  \n" +
             "WHERE id_patient =:idPatient")
     public void UpdatePatientDateIn(String idPatient, LocalDate now);
 
     //Update date out when delete
     @Modifying
-    @Query("UPDATE icu_management.patient\n" +
+    @Query("UPDATE railway.patient\n" +
             "SET date_out =:now  \n" +
             "WHERE id_patient =:idPatient")
     public void UpdatePatientDateOut(String idPatient, LocalDate now);

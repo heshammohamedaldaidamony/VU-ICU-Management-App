@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface MRRepo extends CrudRepository<MedicalReportProj,Long> {
 
-    @Query("SELECT id_med_report ,name ,date FROM icu_management.medical_report WHERE id_patient =:idPatient")
+    @Query("SELECT id_med_report ,name ,date FROM railway.medical_report WHERE id_patient =:idPatient")
     public List<MedicalReport> findAllMRsByPatientId(@Param("idPatient") String idPatient);
 
 }

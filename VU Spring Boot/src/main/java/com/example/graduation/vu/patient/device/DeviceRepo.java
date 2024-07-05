@@ -16,7 +16,7 @@ public interface DeviceRepo extends CrudRepository<Device, Integer> {
             "       patient.name AS patient,\n" +
             "       patient.diagnosis,\n" +
             "       nurse.name AS nurse \n" +
-            "FROM icu_management.device\n" +
+            "FROM railway.device\n" +
             "LEFT JOIN patient_device ON patient_device.id_device = device.id_device\n" +
             "LEFT JOIN patient ON patient.id_patient = patient_device.id_patient\n" +
             "LEFT JOIN shift_nurse_patient ON shift_nurse_patient.id_patient = patient.id_patient\n" +

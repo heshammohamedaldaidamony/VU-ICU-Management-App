@@ -10,23 +10,23 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepo  extends CrudRepository<User,String > {
-    @Query("select doctor.id_doctor,doctor.name,doctor.specialize,doctor.street,doctor.zone,doctor.picture,phone_doctor.phone from icu_management.doctor\n" +
+    @Query("select doctor.id_doctor,doctor.name,doctor.specialize,doctor.street,doctor.zone,doctor.picture,phone_doctor.phone from railway.doctor\n" +
             "join phone_doctor on doctor.id_doctor=phone_doctor.id_doctor\n" +
             "where phone_doctor.phone=:phone")
     public Doctor findDoctorByPhone(String phone);
-    @Query("select nurse.id_nurse,nurse.name,nurse.street,nurse.zone,nurse.picture,phone_nurse.phone from icu_management.nurse\n" +
+    @Query("select nurse.id_nurse,nurse.name,nurse.street,nurse.zone,nurse.picture,phone_nurse.phone from railway.nurse\n" +
             "join phone_nurse on nurse.id_nurse=phone_nurse.id_nurse\n" +
             "where phone_nurse.phone=:phone")
     public Nurse findNurseByPhone(String phone);
 
     //Update profile pic
     @Modifying
-    @Query("UPDATE icu_management.doctor\n" +
+    @Query("UPDATE railway.doctor\n" +
             "SET picture =:picture\n" +
             "WHERE id_doctor =:id")
     public void updateDoctorProfilePictureBYId(String id,byte[] picture);
     @Modifying
-    @Query("UPDATE icu_management.nurse\n" +
+    @Query("UPDATE railway.nurse\n" +
             "SET picture =:picture\n" +
             "WHERE id_nurse =:id")
     public void updateNurseProfilePictureBYId(String id,byte[] picture);

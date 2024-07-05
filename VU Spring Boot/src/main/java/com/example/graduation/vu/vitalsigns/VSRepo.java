@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface VSRepo extends CrudRepository<VSReport,Long> {
-    @Query("SELECT * FROM icu_management.vitalsign_report\n" +
+    @Query("SELECT * FROM railway.vitalsign_report\n" +
             "where id_patient=:id")
     public List<VSReport> findAllByPatientId(String id);
 }

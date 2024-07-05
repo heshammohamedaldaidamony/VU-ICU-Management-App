@@ -27,7 +27,7 @@ public interface TaskRepo extends CrudRepository<Task, Long> {
     @Query("SELECT task.id_task , task.description , task.status , task.donedate , task.duedate ,\n" +
             "doctor.id_doctor , doctor.name as doctor , medicine.id_medicine , \n" +
             "medicine.name as medicine , nurse.id_nurse , nurse.name as nurse \n" +
-            "FROM icu_management.task\n" +
+            "FROM railway.task\n" +
             "left join doctor on doctor.id_doctor=task.id_doctor\n" +
             "left join medicine on medicine.id_medicine=task.id_medicine\n" +
             "left join nurse on nurse.id_nurse=task.id_nurse\n" +
@@ -49,7 +49,7 @@ public interface TaskRepo extends CrudRepository<Task, Long> {
     @Query("SELECT task.id_task , task.description , task.status , task.donedate , task.duedate ,\n" +
             "doctor.id_doctor , doctor.name as doctor , medicine.id_medicine , \n" +
             "medicine.name as medicine , nurse.id_nurse , nurse.name as nurse \n" +
-            "FROM icu_management.task\n" +
+            "FROM railway.task\n" +
             "left join doctor on doctor.id_doctor=task.id_doctor\n" +
             "left join medicine on medicine.id_medicine=task.id_medicine\n" +
             "left join nurse on nurse.id_nurse=task.id_nurse\n" +
@@ -59,7 +59,7 @@ public interface TaskRepo extends CrudRepository<Task, Long> {
             "            doctor.id_doctor , doctor.name as doctor , medicine.id_medicine , \n" +
             "            medicine.name as medicine ,task.id_patient , task.id_nurse \n" +
             "FROM \n" +
-            "    icu_management.task\n" +
+            "    railway.task\n" +
             "    join doctor on doctor.id_doctor=task.id_doctor\n" +
             "\tleft join medicine on medicine.id_medicine=task.id_medicine\n" +
             "     join shift_nurse_patient on shift_nurse_patient.id_patient=task.id_patient\n" +
