@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface MeasureRepo extends CrudRepository<MeasureRepo,Long> {
-    @Query("SELECT * FROM railway.measure\n" +
+    @Query("SELECT * FROM measure\n" +
             "where id_vs_report=:reportId AND id_sign=:signId")
     public List<Measure> findMeasuresReportIdAndSignId(Long reportId,int signId);
 }
