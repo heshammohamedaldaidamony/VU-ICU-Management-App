@@ -44,4 +44,14 @@ During the analysis phase, our team focused on thoroughly understanding the proj
 #### Database Analysis and Design
 We designed the database schema, ensuring it meets the project requirements. We created both logical and physical Entity-Relationship (ER) diagrams to represent and relationships between different entities in the system.
 - 🔗[View DataBase Script And Diagrams](DataBase-mysql)
+#### UML Diagrams
+- 🔗[View UML Diagrams](DOCs/UML%20Diagrams)
 
+## Design
+- 🔗[View UI-UX Design](https://www.figma.com/design/cEh3XCKwOgDhwkyOG3LdCw/VU-App?node-id=190-460&t=jT2b3lBsnHeoM8q3-1)
+
+## Implementation
+#### Backend
+We used springboot framework to implement the endpoints of our app (spring rest , spring data jdbc).
+#### Data Base
+We used mysql DBMS (mysql workbench) to implement the DB.
